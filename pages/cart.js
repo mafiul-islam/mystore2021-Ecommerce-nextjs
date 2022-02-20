@@ -46,6 +46,7 @@ const Cart  = ({error,products})=>{
         return(
             <>
               {cProducts.map(item=>{
+                  console.log(item.product);
                 price = price + item.quantity * item.product.price
                   return(
                       <div style={{display:"flex",margin:"20px"}} key={item._id}>
@@ -92,7 +93,7 @@ const Cart  = ({error,products})=>{
                 shippingAddress={true}
                 billingAddress={true}
                 zipCode={true}
-                stripeKey="pk_test_51H6fgDEta3rHzkPYGgIOQZSFrukEzAl71AOnyAUjyGR8uJPDaGfALQYWre4F5g0Quyh9d7PTphh56SmUlhtsQYmd00DZwB9gMj"
+                stripeKey="pk_test_TTebMPrlxPhCmnV89GSe5Kr6"
                 token={(paymentInfo)=>handleCheckout(paymentInfo)}
                 >
                 <button className="btn">Checkout</button>

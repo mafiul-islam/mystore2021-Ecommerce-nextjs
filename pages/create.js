@@ -37,9 +37,9 @@ const Create = ()=>{
     const imageUpload = async ()=>{
          const data =  new FormData()
          data.append('file',media)
-         data.append('upload_preset',"mystore")
-         data.append('cloud_name',"cnq")
-         const res = await fetch("	https://api.cloudinary.com/v1_1/cnq/image/upload",{
+         data.append('upload_preset',"uploads")
+         data.append('cloud_name',"aristomarket")
+         const res = await fetch("	https://api.cloudinary.com/v1_1/aristomarket/image/upload",{
            method:"POST",
            body:data
          })
